@@ -30,13 +30,34 @@ function Bandas() {
         </thead>
         <tbody>
           {console.log("Bandas", bandas)}
-          {offers.map((e, i) => (
-            <Job key={i} offer={e} />
+          {bandas.map((e, i) => (
+            <Job key={i} banda={e} />
           ))}
         </tbody>
       </table>
+
+      <text>La banda mas antigua es {nombreAntigua()} y fue fundada hace {añoAntigua()} años</text>      
+
     </div>
   );
 };
+
+function nombreAntigua(){
+
+  for (var i = 0; i < Bandas.length; i++) {
+    current=10000;
+    if(i.banda.foundation_year<current);
+  }
+  return i.banda.name;
+}
+
+function añoAntigua(){
+
+  for (var i = 0; i < Bandas.length; i++) {
+    current=10000;
+    if(i.banda.foundation_year<current);
+  }
+  return i.banda.foundation_year;
+}
 
 export default bandas;
